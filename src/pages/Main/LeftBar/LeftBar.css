@@ -1,0 +1,94 @@
+.leftBarBox {
+  padding: 30px;
+
+  display: block;
+  position: fixed;
+  height: 100%;
+}
+
+.leftBar-logo {
+  margin-left: 10px;
+}
+.leftBar-main {
+  display: table;
+  margin-top: 30px;
+}
+
+.leftBar-main-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftBar-txt {
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.leftBar-txt-home {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.leftBar-txt-search {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.leftBar-txt-direct {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.leftBar-txt-like {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 15px;
+  cursor: pointer;
+}
+
+.leftBar-txt-plus {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.leftBar-icon {
+  width: 25px;
+  height: 25px;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 20px 0 20px 0;
+  cursor: pointer;
+}
+
+.leftBar-footer {
+  margin-top: 50px;
+}
+
+.settings {
+  display: flex;
+
+  align-items: center;
+}
+
+.settings-icon {
+  width: 15px;
+  margin-right: 5px;
+  margin-top: 8px;
+}
+
+.settings-txt {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}

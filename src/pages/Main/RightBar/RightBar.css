@@ -1,0 +1,88 @@
+.rightBarBox {
+  padding-left: 100px;
+}
+
+.txtBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.txt-1 {
+  font-weight: bold;
+  color: gray;
+}
+
+.txt-2 {
+  font-size: small;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.member-list {
+  margin-top: 20px;
+}
+
+.memberBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eachMember {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.eachMember-info {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.eachId {
+  margin-bottom: 5px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.eachTxt {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 12px;
+  color: gray;
+}
+
+.eachMember-btn {
+  position: absolute;
+  margin-left: 200px;
+  background-color: #0095f6;
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.otherInfoBox {
+  margin-top: 50px;
+}
+
+.otherTxt-1 {
+  font-size: 12px;
+  font-weight: bold;
+  color: lightgrey;
+}
+
+.otherTxt-2 {
+  margin-top: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  color: lightgrey;
+}
