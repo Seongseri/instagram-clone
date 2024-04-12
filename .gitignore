@@ -24,3 +24,5 @@ yarn-error.log*
 
 # ignore markdown files
 contents/*.md
+
+*storybook.log

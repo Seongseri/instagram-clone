@@ -1,0 +1,92 @@
+{
+  "postingData": [
+    {
+      "postingId": 1,
+      "username": "jeein",
+      "postingImages": [
+        {
+          "imgId": 101,
+          "imgUrl": "/assets/images/postingImg/dolphin.jpg"
+        }
+      ],
+      "content": "돌고래 수영"
+    },
+    {
+      "postingId": 2,
+      "username": "jeein",
+      "postingImages": [
+        {
+          "imgId": 102,
+          "imgUrl": "/assets/images/postingImg/earth.jpg"
+        }
+      ],
+      "content": "지구를 아끼자"
+    },
+    {
+      "postingId": 3,
+      "username": "jeein",
+      "postingImages": [
+        {
+          "imgId": 103,
+          "imgUrl": "/assets/images/postingImg/fire.jpg"
+        }
+      ],
+      "content": "스모어 만들기기"
+    },
+    {
+      "postingId": 4,
+      "username": "jeein",
+      "postingImages": [
+        {
+          "imgId": 104,
+          "imgUrl": "/assets/images/postingImg/hat.jpg"
+        }
+      ],
+      "content": "모자 쓰고 피크닉"
+    },
+    {
+      "postingId": 5,
+      "username": "jeein",
+      "postingImages": [
+        {
+          "imgId": 105,
+          "imgUrl": "/assets/images/postingImg/meeting.jpg"
+        }
+      ],
+      "content": "오늘 회의 시작!"
+    },
+    {
+      "postingId": 6,
+      "username": "jeein",
+      "postingImages": [
+        {
+          "imgId": 106,
+          "imgUrl": "/assets/images/postingImg/star.jpg"
+        }
+      ],
+      "content": "반짝이는 아이디어"
+    },
+    {
+      "postingId": 7,
+      "username": "jeein",
+      "postingImages": [
+        {
+          "imgId": 107,
+          "imgUrl": "/assets/images/postingImg/peach_blossom.jpg"
+        }
+      ],
+      "content": "벚꽃의 계절"
+    },
+    {
+      "postingId": 8,
+      "username": "jeein",
+      "postingImages": [
+        {
+          "imgId": 108,
+          "imgUrl": "/assets/images/postingImg/test.jpg"
+        }
+      ],
+      "content": "코딩 테스트"
+    }
+  ]
+}
