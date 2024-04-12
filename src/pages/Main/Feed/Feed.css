@@ -16,6 +16,7 @@
 
 .feed-img {
   margin-top: 20px;
+  height: 133%;
 }
 
 .feed-icon {
@@ -112,4 +113,5 @@
   margin-top: 15px;
   border-width: 0.5px;
   width: 100%;
+  margin-bottom: 10px;
 }

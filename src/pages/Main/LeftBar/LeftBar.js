@@ -8,11 +8,13 @@ function LeftBar() {
     <>
       <div className="leftBarBox">
         <div className="leftBar-header">
-          <img src={process.env.PUBLIC_URL + "/assets/logo.png"} width={25} />
+          <img
+            className="leftBar-header-icon"
+            src={process.env.PUBLIC_URL + "/assets/logo.png"}
+          />
           <img
             className="leftBar-logo"
             src={process.env.PUBLIC_URL + "/assets/instagram.png"}
-            width={80}
           />
         </div>
         <div className="leftBar-main">

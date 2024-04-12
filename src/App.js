@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <BrowserRouter>
+      
         <Routes>
           <Route path="/main" element={<Main />}></Route>
           <Route path="/login" element={<LoginForm />} />
@@ -21,7 +21,7 @@ function App() {
           <Route path="/profile" element={<UserProfile />}></Route>
           <Route path="/dm" element={<DirectMessage />}></Route>
         </Routes>
-      </BrowserRouter>
+     
     </>
   );
 }
