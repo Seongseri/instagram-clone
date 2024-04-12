@@ -20,30 +20,18 @@ img {
   width: 100%;
   height: 100%;
   max-width: 100%;
-  background-position: 0px 0px; background-size: 176px 264px; width: 174px; height: 50px; background-repeat: no-repeat; display: inline-block;
+  background-position: 0px 0px;
+  background-size: 176px 264px;
+  width: 174px;
+  height: 50px;
+  background-repeat: no-repeat;
+  display: inline-block;
 }
 
 /*link styling*/
 a {
   text-decoration: none;
 }
-
-/*Logo styling*/
-.loginLeft {
-    flex: 1;
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 600px;
-    background-image: url("../../assets/Images/login/home-phones.png");
-    min-width: 460px;
-    background-repeat: no-repeat;
-    background-position: right 2px;
-    @media (max-width: 877px) {
-      flex: 1;
-      display: none;
-    }
-  }
 
 /*body background color*/
 body {
@@ -57,13 +45,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 2rem;
 }
 
 .container {
   width: 100%;
   max-width: 93.5rem;
   margin: 3rem auto 0;
+  margin-top: 8rem;
 }
 
 #wrapper > .container {
@@ -96,29 +84,33 @@ body {
 }
 
 /*logo again styling*/
-.logo h1 {
-  /*width: 17.5rem;*/
+.logo {
   margin-bottom: 2.5rem;
+  padding-bottom: 3rem;
 }
 
 /*form input styling*/
 .form-data section input {
   padding: 0.8rem;
   margin-bottom: 0.5rem;
-  border: 2px solid #eee;
+  border: 1px solid #eee;
   border-radius: 0.4rem;
+  height: 37.6px;
 }
 
 .form-btn {
   margin: 1rem 0 1.5rem;
   height: 3rem;
-  background-color: #3897f0;
+  background-color: #0095f6;
   font-size: 1.4rem;
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
+}
+.form-btn:hover {
+  background-color: #1877f2;
 }
 
 /*OR font styling*/
@@ -149,12 +141,55 @@ body {
   right: 0;
 }
 
+/* 비밀번호 컨테이너 스타일링 */
+.password-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* 비밀번호 인풋 스타일링 */
+.password-input {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 0.4rem;
+  flex-grow: 1;
+}
+
+/* 비밀번호 표시/숨김 버튼 스타일링 */
+.toggle-password {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0; /* 인풋 필드 내에서 오른쪽에 위치 */
+  bottom: 10px;
+  outline: none; /* 클릭 시 테두리 제거 */
+  font-weight: bold;
+}
+
+.toggle-password:hover {
+  color: gray;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+
 /*FACEBOOK ligin text styling*/
 .facebook-login {
   font-size: 1.4rem;
   font-weight: bold;
   color: #385185;
   margin-bottom: 2.5rem;
+  cursor: pointer;
 }
 
 .facebook-login {
@@ -167,6 +202,15 @@ body {
 .facebook-login i {
   font-size: 2rem;
   margin-right: 0.7rem;
+  margin: 0;
+  margin-left: 3px;
+  padding: 0;
+}
+
+span img {
+  width: 2.4rem;
+  height: 2.4rem;
+  vertical-align: middle;
 }
 
 /*password reset styling*/
@@ -213,6 +257,16 @@ body {
   color: #262626;
 }
 
+.facebookLogo {
+  width: 1rem;
+  height: 1rem;
+}
+
+.facebook-login {
+  border: none;
+  background-color: transparent;
+}
+
 .badge {
   width: 100%;
   display: flex;
@@ -228,37 +282,32 @@ body {
   margin-right: 1rem;
 }
 
-/*Footer link styling*/
-footer {
-  padding: 5rem 0;
-}
+/*responsive styling*/
+@media (max-width: 900px) {
+  .phone-app-demo {
+    display: none;
+  }
 
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  flex-wrap: wrap;
-  margin-top: 0;
-}
+  .form-data {
+    margin: 0 auto;
+  }
 
-.footer-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
+  #wrapper > .container {
+    padding: 0;
+  }
 
-.footer-nav ul li {
-  margin-right: 1.6rem;
-}
+  footer .container {
+    padding: 0 2rem;
+    justify-content: center;
+  }
 
-.footer-nav ul li a {
-  color: #003569;
-}
+  .footer-nav ul {
+    justify-content: center;
+  }
 
-.copyright-notice {
-  color: #999999;
+  .footer-nav ul li {
+    margin-bottom: 1rem;
+  }
 }
 
 /*responsive styling*/
