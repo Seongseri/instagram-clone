@@ -1,0 +1,7 @@
+.mainBox {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 200px;
+  padding-top: 50px;
+  padding-right: 30px;
+}
