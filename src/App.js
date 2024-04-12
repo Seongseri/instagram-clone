@@ -1,6 +1,6 @@
 import "./App.css";
 import GlobalStyles from "./styles/GlobalStyle";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Main from "./pages/Main/Main";
 import SignUp from "./components/Login/SignUp";
 import LoginForm from "./components/Login/LoginForm";
