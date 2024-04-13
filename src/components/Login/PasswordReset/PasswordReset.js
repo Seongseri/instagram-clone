@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../Footer";
 
-import "../../styles/UI/forgotPassword.css";
-import InstagramLogo from "../../assets/Images/login/logo_text.png";
+import "../PasswordReset/PasswordReset.css";
 
 const LoginForm = () => {
   const [user, setUser] = useState("");

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebaseConfig";
 import { getAuth, signInWithPopup, FacebookAuthProvider } from "firebase/auth";
-import "../../styles/UI/signup.css";
+import "../SignUp/signup.css";
 import Footer from "../Footer";
 import microsofrBtn from "../../assets/Images/login/microsofr_btn.png";
 import goolgleBtn from "../../assets/Images/login/goolgle_btn.png";

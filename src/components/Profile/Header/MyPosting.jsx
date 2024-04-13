@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import * as S from "./MyPosting.Styles";
 import Posting from "./Posting";
-import { ReactComponent as Table } from "../../../assets/Svgs/Table.svg";
-import { ReactComponent as Bookmark } from "../../../assets/Svgs/Bookmark.svg";
-import { ReactComponent as Tagged } from "../../../assets/Svgs/Tagged.svg";
+import { ReactComponent as Table } from "../../../assets/Images/sidebarTab/Table.svg";
+import { ReactComponent as Bookmark } from "../../../assets/Images/sidebarTab/Bookmark.svg";
+import { ReactComponent as Tagged } from "../../../assets/Images/sidebarTab/Tagged.svg";
 
 const MyPosting = () => {
   const [postings, setPostings] = useState([]);

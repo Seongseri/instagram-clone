@@ -1,5 +1,5 @@
 import * as S from "./FileUpload.Styles";
-import { ReactComponent as ImageVideo } from "../../../assets/Svgs/ImageVideo.svg";
+import { ReactComponent as ImageVideo } from "../../../assets/Images/sidebarTab/ImageVideo.svg";
 import { useRef, useState } from "react";
 
 const FileUpload = ({ onImageSelected }) => {

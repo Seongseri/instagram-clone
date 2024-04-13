@@ -11,11 +11,11 @@ import {
 import Footer from "../../Footer";
 import ImageSlider from "../ImageSlider/ImageSlider";
 
-import "../../styles/UI/login.css";
-import InstagramLogo from "../../assets/Images/login/logo_text.png";
-import microsofrBtn from "../../assets/Images/login/microsofr_btn.png";
-import FacebookLogo from "../../assets/Facebook-Logo.jpg";
-import goolgleBtn from "../../assets/Images/login/goolgle_btn.png";
+import "./login.css";
+import InstagramLogo from "../../../assets/Images/login/logo_text.png";
+import microsofrBtn from "../../../assets/Images/login/microsofr_btn.png";
+import FacebookLogo from "../../../assets/Facebook-Logo.jpg";
+import goolgleBtn from "../../../assets/Images/login/goolgle_btn.png";
 
 const LoginForm = () => {
   const [user, setUser] = useState("");

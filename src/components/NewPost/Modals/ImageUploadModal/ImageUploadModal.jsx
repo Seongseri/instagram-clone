@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import * as S from "./ImageUploadModal.Styles";
+import * as S from "../ImageUploadModal/ImageUploadModal.Styles";
 import FileUpload from "../../Steps/FileUpload";
-import TextWriteModal from "../TextWriteModal";
+import TextWriteModal from "../TextWriteModal/TextWriteModal";
 
 const ImageUploadModal = ({ setIsModalOpen }) => {
   const modalBackground = useRef();
