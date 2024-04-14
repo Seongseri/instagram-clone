@@ -1,0 +1,7 @@
+{
+  "commentData": [
+    { "id": 1, "username": "user1", "content": "그림이 너무 예뻐요!" },
+    { "id": 2, "username": "user2", "content": "나도 갈래" },
+    { "id": 3, "username": "user3", "content": "좋은 피드네요" }
+  ]
+}
