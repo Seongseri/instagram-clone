@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import bg1 from "../../assets/screenshot1.png";
-import bg2 from "../../assets/screenshot2.png";
-import bg3 from "../../assets/screenshot3.png";
-import bg4 from "../../assets/screenshot4.png";
-import "../../styles/UI/ImageSlider.css";
+import bg1 from "../../../assets/screenshot1.png";
+import bg2 from "../../../assets/screenshot2.png";
+import bg3 from "../../../assets/screenshot3.png";
+import bg4 from "../../../assets/screenshot4.png";
+import "../ImageSlider/ImageSlider.css";
 
 const ImageSlider = () => {
   useEffect(() => {

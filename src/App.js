@@ -2,9 +2,9 @@ import "./App.css";
 import GlobalStyles from "./styles/GlobalStyle";
 import { Routes, Route, Link } from "react-router-dom";
 import Main from "./pages/Main/Main";
-import SignUp from "./components/Login/SignUp";
-import LoginForm from "./components/Login/LoginForm";
-import ForgotPassword from "./components/Login/ForgotPassword";
+import SignUp from "./components/SignUp/SignUpForm";
+import LoginForm from "./components/Login/LoginForm/LoginForm";
+import ForgotPassword from "./components/Login/PasswordReset/PasswordReset";
 import UserProfile from "./pages/Profile/UserProfile";
 import DirectMessage from "./pages/DM/DirectMessage";
 

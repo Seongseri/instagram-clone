@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
+import Footer from "../../Footer";
 
-import "../../styles/UI/forgotPassword.css";
-import InstagramLogo from "../../assets/Images/login/logo_text.png";
+import "../PasswordReset/PasswordReset.css";
 
 const LoginForm = () => {
   const [user, setUser] = useState("");
@@ -21,7 +20,7 @@ const LoginForm = () => {
       <div className="PasswordContainer">
         <div className="password-reset-box">
           <div className="logo">
-            <img
+            <imginfo
               src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
               alt="instagram"
             />

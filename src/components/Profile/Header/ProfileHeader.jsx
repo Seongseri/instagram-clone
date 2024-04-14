@@ -1,7 +1,7 @@
 import * as S from "./ProfileHeader.Styles";
 import loopy from "../../../assets/Images/profile/loopy.png";
-import { ReactComponent as Setting } from "../../../assets/Svgs/Setting.svg";
-import ImageUploadModal from "../../NewPost/Modals/ImageUploadModal";
+import { ReactComponent as Setting } from "../../../assets/Images/sidebarTab/Setting.svg";
+import ImageUploadModal from "../../NewPost/Modals/ImageUploadModal/ImageUploadModal";
 import { useState } from "react";
 
 const ProfileHeader = () => {

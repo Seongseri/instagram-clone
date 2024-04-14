@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { auth } from "../../firebase/firebaseConfig";
+import { auth } from "../../../firebase/firebaseConfig";
 import {
   getAuth,
   signInWithPopup,
@@ -8,14 +8,14 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-import Footer from "../Footer";
-import ImageSlider from "../Login/ImageSlider";
+import Footer from "../../Footer";
+import ImageSlider from "../ImageSlider/ImageSlider";
 
-import "../../styles/UI/login.css";
-import InstagramLogo from "../../assets/Images/login/logo_text.png";
-import microsofrBtn from "../../assets/Images/login/microsofr_btn.png";
-import FacebookLogo from "../../assets/Facebook-Logo.jpg";
-import goolgleBtn from "../../assets/Images/login/goolgle_btn.png";
+import "./login.css";
+import InstagramLogo from "../../../assets/Images/login/logo_text.png";
+import microsofrBtn from "../../../assets/Images/login/microsofr_btn.png";
+import FacebookLogo from "../../../assets/Facebook-Logo.jpg";
+import goolgleBtn from "../../../assets/Images/login/goolgle_btn.png";
 
 const LoginForm = () => {
   const [user, setUser] = useState("");
