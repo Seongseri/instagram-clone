@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Member from "../RightBar/Member";
 import "./Feed.css";
-import feedData from "./feedData";
+import feedData from "./DataBase/feedData";
+import commentData from "./DataBase/commentIdData";
 
 function Feed() {
-  const [data] = useState(feedData);
+  const [data, setData] = useState(feedData);
+  const [cmtData, setCmtData] = useState(commentData);
+
   const [isClicked, setIsClicked] = useState([
     false,
     false,
@@ -47,9 +50,15 @@ function Feed() {
     "/assets/bookmark.png",
   ]);
 
+  const [commentTxt, setCommentTxt] = useState("");
+  const onChange = (e) => {
+    setCommentTxt(e.target.value);
+  };
+
   return (
     <div className="article">
       {data.map((a, i) => {
+        const content = cmtData[i];
         return (
           <article className="feedBox">
             <div className="feed-header">
@@ -155,7 +164,9 @@ function Feed() {
               >
                 댓글 {data[i].cmtNum}개 보기
               </div>
-              {viewCmt[i] == true ? <Comment data={data[i]} /> : null}
+              {viewCmt[i] == true ? (
+                <Comment content={content} data={data[i]} />
+              ) : null}
               <div
                 className="addComment"
                 onClick={() => {
@@ -177,8 +188,29 @@ function Feed() {
                   <input
                     className="inputBox"
                     placeholder="댓글을 입력하세요"
+                    onChange={onChange}
+                    value={commentTxt}
                   ></input>
-                  <button className="commentBtn">작성</button>
+                  {commentTxt.trim() != "" ? (
+                    <button
+                      className="commentBtn"
+                      onClick={() => {
+                        let copyData = [...cmtData];
+                        let copyDataFirst = copyData[i];
+                        copyDataFirst.push({
+                          id: "loopy",
+                          txt: commentTxt.valueOf(),
+                        });
+                        data[i].cmtNum++;
+                        setCmtData(copyData);
+                        setCommentTxt("");
+                      }}
+                    >
+                      작성
+                    </button>
+                  ) : (
+                    <button className="nonActiveBtn">작성</button>
+                  )}
                 </div>
               ) : null}
             </div>
@@ -205,22 +237,77 @@ function Writer(props) {
 }
 
 function Comment(props) {
+  const [cmtLike, setCmtLike] = useState("/assets/heart.png");
   return (
     <div className="comment-list">
-      <p className="eachComment">
-        <span className="comment-id">{props.data.id1}</span>
-        {props.data.cmt1}
-      </p>
-      <p className="eachComment">
-        <span className="comment-id">{props.data.id2}</span>
-        {props.data.cmt2}
-      </p>
-      <p className="eachComment">
-        <span className="comment-id">{props.data.id3}</span>
-        {props.data.cmt3}
-      </p>
+      {props.content.map((a, i) => {
+        return (
+          <p className="eachComment">
+            <div>
+              <span className="comment-id">{props.content[i]["id"]}</span>
+              {props.content[i]["txt"]}
+            </div>
+            <div className="comment-icon">
+              <img
+                className="comment-heartIcon"
+                src={process.env.PUBLIC_URL + cmtLike}
+                onClick={(e) => {
+                  if (
+                    e.target.getAttribute("src") ==
+                    process.env.PUBLIC_URL + cmtLike
+                  ) {
+                    e.target.setAttribute(
+                      "src",
+                      process.env.PUBLIC_URL + "/assets/filled-heart.png"
+                    );
+                  } else if (
+                    e.target.getAttribute("src") ==
+                    process.env.PUBLIC_URL + "/assets/filled-heart.png"
+                  ) {
+                    e.target.setAttribute("src", cmtLike);
+                  }
+                }}
+              />
+              <img
+                className="comment-deleteIcon"
+                src={process.env.PUBLIC_URL + "/assets/delete.png"}
+                onClick={(e) => {
+                  if (e.target.className === "comment-deleteIcon") {
+                    let parent = e.target.parentElement.parentElement;
+                    parent.remove();
+                    props.data.cmtNum--;
+                  }
+                }}
+              />
+            </div>
+          </p>
+        );
+      })}
     </div>
   );
 }
 
 export default Feed;
+
+{
+  /* <p className="eachComment">
+        <div>
+          <span className="comment-id">{props.data.id2}</span>
+          {props.data.cmt2}
+        </div>
+        <img
+          className="comment-icon"
+          src={process.env.PUBLIC_URL + "/assets/heart.png"}
+        />
+      </p>
+      <p className="eachComment">
+        <div>
+          <span className="comment-id">{props.data.id3}</span>
+          {props.data.cmt3}
+        </div>
+        <img
+          className="comment-icon"
+          src={process.env.PUBLIC_URL + "/assets/heart.png"}
+        />
+      </p> */
+}

@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import "./LeftBar.css";
+import { Routes, Route, Link, useNavigate, Outlet } from "react-router-dom";
+import loopy from "../../../assets/Images/profile/loopy.png";
+import Bookmark from "../../../assets/Images/sidebarTab/Bookmark.svg";
+import Activity from "../../../assets/Images/sidebarTab/activity.svg";
+import SwitchMode from "../../../assets/Images/sidebarTab/SwitchMode.svg";
+import ReportProblem from "../../../assets/Images/sidebarTab/reportProblem.svg";
+import Setting from "../../../assets/Images/sidebarTab/Setting.svg";
 
 function LeftBar() {
   const [menu, setMenu] = useState(false);
+  let navigate = useNavigate();
 
   return (
     <>
@@ -15,6 +23,9 @@ function LeftBar() {
           <img
             className="leftBar-logo"
             src={process.env.PUBLIC_URL + "/assets/instagram.png"}
+            onClick={() => {
+              navigate("/main");
+            }}
           />
         </div>
         <div className="leftBar-main">
@@ -23,7 +34,14 @@ function LeftBar() {
               src={process.env.PUBLIC_URL + "/assets/home.png"}
               className="leftBar-icon"
             />
-            <span className="leftBar-txt-home">홈</span>
+            <span
+              className="leftBar-txt-home"
+              onClick={() => {
+                navigate("/main");
+              }}
+            >
+              홈
+            </span>
           </div>
           <div className="leftBar-main-tab">
             <img
@@ -37,14 +55,21 @@ function LeftBar() {
               src={process.env.PUBLIC_URL + "/assets/compass.png"}
               className="leftBar-icon"
             />
-            <span className="leftBar-txt">탐색 탭</span>
+            <span className="leftBar-txt-compass">탐색 탭</span>
           </div>
           <div className="leftBar-main-tab">
             <img
               src={process.env.PUBLIC_URL + "/assets/send.png"}
               className="leftBar-icon"
             />
-            <span className="leftBar-txt-direct">메시지</span>
+            <span
+              className="leftBar-txt-direct"
+              onClick={() => {
+                navigate("/dm");
+              }}
+            >
+              메시지
+            </span>
           </div>
           <div className="leftBar-main-tab">
             <img
@@ -60,43 +85,108 @@ function LeftBar() {
             />
             <span className="leftBar-txt-plus">만들기</span>
           </div>
+          <div className="leftBar-main-tab">
+            <img src={loopy} className="leftBar-profileIcon" />
+            <span
+              className="leftBar-txt-profile"
+              onClick={() => {
+                navigate("/profile");
+              }}
+            >
+              내 프로필
+            </span>
+          </div>
         </div>
         <div className="leftBar-footer">
-          <img
-            src={process.env.PUBLIC_URL + "/assets/threads.png"}
-            className="leftBar-icon"
-          />
-          <img
-            src={process.env.PUBLIC_URL + "/assets/menu.png"}
-            className="leftBar-icon"
-            onClick={() => {
-              setMenu(!menu);
-            }}
-          />
-          {menu == true ? (
-            <div>
+          <div className="leftBar-main-tab">
+            <img
+              src={process.env.PUBLIC_URL + "/assets/menu.png"}
+              className="leftBar-icon"
+              onClick={() => {
+                setMenu(!menu);
+              }}
+            />
+            <span
+              className="leftBar-txt-more"
+              onClick={() => {
+                setMenu(!menu);
+              }}
+            >
+              더 보기
+            </span>
+          </div>
+          {menu && (
+            <div
+              className={`settings-menu ${menu ? "" : "settings-menu-hidden"}`}
+            >
               <div className="settings">
-                <img
-                  src={process.env.PUBLIC_URL + "/assets/settings.png"}
-                  className="settings-icon"
-                />
-                <span className="settings-txt">설정</span>
-                {/* 설정 누르면 설정페이지로 이동 */}
+                <img src={Setting} className="settings-icon" />
+                <span
+                  className="settings-txt"
+                  onClick={() => {
+                    navigate("/accounts"); // 설정 페이지로 이동
+                  }}
+                >
+                  설정
+                </span>
               </div>
-              {/* <div
-                className="settings-txt"
-                onClick={() => {
-                  alert("계정을 전환하시겠습니까?");
-                }}
-              >
-                계정 전환
-              </div> */}
+
+              <div className="leftBar-main-tab">
+                <img
+                  src={Activity}
+                  className="leftBar-icon"
+                  onClick={() => {
+                    setMenu(!menu);
+                  }}
+                />
+                <span className="hiddenBar-txt">내 활동</span>
+              </div>
+              <div className="leftBar-main-tab">
+                <img
+                  src={Bookmark}
+                  className="leftBar-icon"
+                  onClick={() => {
+                    setMenu(!menu);
+                  }}
+                />
+                <span className="hiddenBar-txt">저장됨</span>
+              </div>
+              <div className="leftBar-main-tab">
+                <img
+                  src={SwitchMode}
+                  className="leftBar-icon"
+                  onClick={() => {
+                    setMenu(!menu);
+                  }}
+                />
+                <span className="hiddenBar-txt">모드 전환</span>
+              </div>
+              <div className="leftBar-main-tab">
+                <img
+                  src={process.env.PUBLIC_URL + ReportProblem}
+                  className="leftBar-icon"
+                  onClick={() => {
+                    setMenu(!menu);
+                  }}
+                />
+                <span className="hiddenBar-txt">문제 신고</span>
+              </div>
+              <div className="leftBar-main-tab">
+                <img
+                  src={process.env.PUBLIC_URL + "/assets/threads.png"}
+                  className="leftBar-icon"
+                  onClick={() => {
+                    setMenu(!menu);
+                  }}
+                />
+                <span className="hiddenBar-txt">threads</span>
+              </div>
               <div
                 className="settings-txt"
                 onClick={() => {
-                  if (window.confirm("로그아웃 하시겠습니까?") == true) {
+                  if (window.confirm("로그아웃 하시겠습니까?")) {
                     alert("로그아웃 되었습니다.");
-                    //로그인 페이지로 이동
+                    navigate("/login"); // 로그인 페이지 경로로 이동
                   } else {
                     return;
                   }
@@ -105,7 +195,7 @@ function LeftBar() {
                 로그아웃
               </div>
             </div>
-          ) : null}
+          )}
         </div>
       </div>
     </>
