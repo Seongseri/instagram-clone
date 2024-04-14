@@ -4,9 +4,10 @@ import { Routes, Route, Link } from "react-router-dom";
 import Main from "./pages/Main/Main";
 import SignUp from "./components/SignUp/SignUpForm";
 import LoginForm from "./components/Login/LoginForm/LoginForm";
-import ForgotPassword from "./components/Login/PasswordReset/PasswordReset";
+import PasswordReset from "./components/Login/PasswordReset/PasswordReset";
 import UserProfile from "./pages/Profile/UserProfile";
 import DirectMessage from "./pages/DM/DirectMessage";
+import SettingMain from "./pages/SettingForm/SettingMain";
 
 function App() {
   return (
@@ -14,11 +15,12 @@ function App() {
       <GlobalStyles />
       <Routes>
         <Route path="/main" element={<Main />}></Route>
-        <Route path="/login" element={<LoginForm />} />
+        <Route path="" element={<LoginForm />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/forgot-password" element={<PasswordReset />} />
         <Route path="/profile" element={<UserProfile />}></Route>
         <Route path="/dm" element={<DirectMessage />}></Route>
+        <Route path="/accounts" element={<SettingMain />}></Route>
       </Routes>
     </>
   );

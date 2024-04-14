@@ -3,22 +3,22 @@ import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebaseConfig";
 import { getAuth, signInWithPopup, FacebookAuthProvider } from "firebase/auth";
 import "../SignUp/signup.css";
-import Footer from "../Footer";
+import Footer from "../Common/Footer/footer";
 import microsofrBtn from "../../assets/Images/login/microsofr_btn.png";
 import goolgleBtn from "../../assets/Images/login/goolgle_btn.png";
 
 const SignUp = ({
   onChangeInput,
-  handleGoogleSignup,
+  handleFacebookLogin,
   handleSignUp,
   email,
   username,
   displayName,
-  password,
   error,
 }) => {
   const { message } = error || {};
   const [userData, setUserData] = useState(null);
+  const [password, setPassword] = useState("");
   const [passwordShown, setPasswordShown] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -35,6 +35,13 @@ const SignUp = ({
         console.error("로그인 실패:", error);
       });
   }
+
+  const handleChangeInput = (event) => {
+    const { name, value } = event.target;
+    if (name === "password") {
+      setPassword(value);
+    }
+  };
 
   return (
     <div id="signupWrapper">
@@ -87,26 +94,21 @@ const SignUp = ({
                 type={passwordShown ? "text" : "password"}
                 placeholder="비밀번호"
                 value={password}
-                onChange={onChangeInput}
+                onChange={handleChangeInput}
                 required
               />
-              <button
-                type="button"
-                onClick={togglePasswordVisibility}
-                className="togglePassword"
-              >
-                {passwordShown ? "숨기기" : "비밀번호 표시"}
-              </button>
+              {password && password.length > 0 && (
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="togglePassword"
+                >
+                  {passwordShown ? "숨기기" : "비밀번호 표시"}
+                </button>
+              )}
             </div>
 
             {message && <div className="error-box">{message}</div>}
-            <button
-              type="submit"
-              className="form-btn"
-              disabled={!password?.length}
-            >
-              가입
-            </button>
           </form>
           <div className="notice2">
             저희 서비스를 이용하는 사람이 회원님의 연락처 정보를 Instagram에
@@ -119,12 +121,19 @@ const SignUp = ({
               더 알아보기
             </a>
           </div>
+          <button
+            type="submit"
+            className="form-btn"
+            disabled={!password?.length}
+          >
+            가입
+          </button>
         </div>
         <div className="login-wrapper">
           <div className="login">
             <div className="question-box">
               <div className="text">계정이 있으신가요?</div>
-              <Link to="/login" className="sign-up-link">
+              <Link to="/" className="sign-up-link">
                 로그인
               </Link>
             </div>

@@ -1,25 +1,22 @@
 /*Footer link styling*/
 footer {
   padding: 5rem 0;
-}
-
-footer .container {
-  display: flex;
-  justify-content: space-between;
-  font-weight: normal;
-  font-size: 12px;
-  flex-wrap: wrap;
-  margin-top: 0;
+  width: 90vw;
 }
 
 .footer-nav ul {
+  list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  justify-content: space-between; /* 내비게이션 항목을 중앙에 배치 */
+  gap: 5px; /* 항목 사이의 간격 */
+  font-weight: normal;
+  font-size: 12px;
 }
 
 .footer-nav ul li {
-  margin-right: 1.6rem;
+  margin-right: 1.2rem;
 }
 
 .footer-nav ul li a {
@@ -29,14 +26,15 @@ footer .container {
 .select-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
-  position: relative;
-  left: 300px;
+  margin: 20px 0;
 }
 
 .copyright-notice {
   color: #737373;
+  font-size: 12px;
+  margin-left: 10px;
 }
 
 select {
@@ -47,6 +45,7 @@ select {
   padding: 0;
   cursor: pointer;
   font-size: 12px;
+  text-align-last: right;
 }
 
 select:hover,

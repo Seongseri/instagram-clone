@@ -9,7 +9,7 @@
   min-width: 460px;
   background-repeat: no-repeat;
   background-position: right 2px;
-  margin-top: 4rem;
+  margin-top: 4.3rem;
   @media (max-width: 877px) {
     flex: 1;
     display: none;
@@ -18,8 +18,8 @@
 
 .mySlides {
   position: absolute;
-  top: 29px;
-  left: 15rem;
+  top: 29.5px;
+  left: 9.5rem;
 }
 
 .image {

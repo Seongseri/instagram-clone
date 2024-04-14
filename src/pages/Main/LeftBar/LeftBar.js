@@ -131,7 +131,7 @@ function LeftBar() {
                 </span>
               </div>
 
-              <div className="leftBar-main-tab">
+              <div className="leftBar-show-tab">
                 <img
                   src={Activity}
                   className="leftBar-icon"
@@ -141,7 +141,7 @@ function LeftBar() {
                 />
                 <span className="hiddenBar-txt">내 활동</span>
               </div>
-              <div className="leftBar-main-tab">
+              <div className="leftBar-show-tab">
                 <img
                   src={Bookmark}
                   className="leftBar-icon"
@@ -151,7 +151,7 @@ function LeftBar() {
                 />
                 <span className="hiddenBar-txt">저장됨</span>
               </div>
-              <div className="leftBar-main-tab">
+              <div className="leftBar-show-tab">
                 <img
                   src={SwitchMode}
                   className="leftBar-icon"
@@ -161,7 +161,7 @@ function LeftBar() {
                 />
                 <span className="hiddenBar-txt">모드 전환</span>
               </div>
-              <div className="leftBar-main-tab">
+              <div className="leftBar-show-tab">
                 <img
                   src={process.env.PUBLIC_URL + ReportProblem}
                   className="leftBar-icon"
@@ -171,7 +171,7 @@ function LeftBar() {
                 />
                 <span className="hiddenBar-txt">문제 신고</span>
               </div>
-              <div className="leftBar-main-tab">
+              <div className="leftBar-show-tab">
                 <img
                   src={process.env.PUBLIC_URL + "/assets/threads.png"}
                   className="leftBar-icon"
@@ -181,12 +181,13 @@ function LeftBar() {
                 />
                 <span className="hiddenBar-txt">threads</span>
               </div>
+              <div className="tab-txt">계정 전환</div>
               <div
-                className="settings-txt"
+                className="tab-txt"
                 onClick={() => {
                   if (window.confirm("로그아웃 하시겠습니까?")) {
                     alert("로그아웃 되었습니다.");
-                    navigate("/login"); // 로그인 페이지 경로로 이동
+                    navigate("/"); // 로그인 페이지 경로로 이동
                   } else {
                     return;
                   }

@@ -1,18 +1,24 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Footer from "../../Footer";
+import Footer from "../../Common/Footer/footer";
+import { auth } from "../../../firebase/firebaseConfig";
+import { sendPasswordResetEmail } from "firebase/auth";
 
 import "../PasswordReset/PasswordReset.css";
 
-const LoginForm = () => {
+const ResetPasswordForm = () => {
   const [user, setUser] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   const [userData, setUserData] = useState(null); // 사용자 데이터 상태 관리를 위한 useState
 
-  const handleSubmit = (e) => {
-    e.preventDefault(); // 폼 제출 시 페이지 리로드 방지
-    console.log("로그인 시도:", user, password);
-    // 여기에 로그인 로직을 구현할 수 있습니다.
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await sendPasswordResetEmail(auth, email);
+      alert("비밀번호 재설정 링크를 이메일로 보냈습니다.");
+    } catch (error) {
+      alert(error.message);
+    }
   };
 
   return (
@@ -20,7 +26,7 @@ const LoginForm = () => {
       <div className="PasswordContainer">
         <div className="password-reset-box">
           <div className="logo">
-            <imginfo
+            <img
               src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
               alt="instagram"
             />
@@ -32,14 +38,15 @@ const LoginForm = () => {
               액세스할 수 있는 링크를 보내드립니다.
             </p>
           </div>
-          <form className="password-reset-form">
+          <form className="password-reset-form" onSubmit={handleSubmit}>
             <input
               name="email"
               type="text"
               placeholder="휴대폰 번호 또는 이메일 주소"
               required
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="submit" className="form-btn">
+            <button type="submit" className="formBtn">
               로그인 링크 보내기
             </button>
           </form>
@@ -59,7 +66,7 @@ const LoginForm = () => {
             <Link to="/signup">새 계정 만들기</Link>
           </div>
           <div className="back-login">
-            <Link to="/login">로그인으로 돌아가기</Link>
+            <Link to="/">로그인으로 돌아가기</Link>
           </div>
         </div>
       </div>
@@ -68,4 +75,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default ResetPasswordForm;

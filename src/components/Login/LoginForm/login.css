@@ -48,10 +48,9 @@ body {
 }
 
 .container {
-  width: 100%;
+  width: 72%;
   max-width: 93.5rem;
   margin: 3rem auto 0;
-  margin-top: 8rem;
 }
 
 #wrapper > .container {
@@ -69,14 +68,14 @@ body {
 
 /*form styling*/
 .form-data {
-  width: 100%;
+  width: 45%;
   max-width: 35rem;
   margin-top: 3rem;
 }
 
 .form-data section {
   background-color: #fff;
-  border: 2px solid #eee;
+  border: 1px solid #dbdbdb;
   display: flex;
   flex-direction: column;
   padding: 2rem 4rem;
@@ -86,7 +85,6 @@ body {
 /*logo again styling*/
 .logo {
   margin-bottom: 2.5rem;
-  padding-bottom: 3rem;
 }
 
 /*form input styling*/
@@ -98,28 +96,30 @@ body {
   height: 37.6px;
 }
 
-.form-btn {
-  margin: 1rem 0 1.5rem;
-  height: 3rem;
+.formBtn {
+  margin: 0.5rem 0 1.5rem;
+  height: 32px;
   background-color: #0095f6;
-  font-size: 1.4rem;
+  font-size: 14px;
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 0.4rem;
   cursor: pointer;
+  width: 100%;
 }
-.form-btn:hover {
+.formBtn:hover {
   background-color: #1877f2;
 }
 
 /*OR font styling*/
 .has-separator {
-  font-size: 1.3rem;
+  font-size: 13px;
+  font-weight: bold;
   color: #999999;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.8rem;
 }
 
 .has-separator::before,
@@ -160,14 +160,14 @@ body {
 /* 비밀번호 표시/숨김 버튼 스타일링 */
 .toggle-password {
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  font-size: 14px;
   color: black;
   background-color: transparent;
   border: none;
   cursor: pointer;
   position: absolute;
   right: 0; /* 인풋 필드 내에서 오른쪽에 위치 */
-  bottom: 10px;
+  bottom: 8.2px;
   outline: none; /* 클릭 시 테두리 제거 */
   font-weight: bold;
 }
@@ -185,58 +185,39 @@ body {
 
 /*FACEBOOK ligin text styling*/
 .facebook-login {
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: bold;
   color: #385185;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.2rem;
   cursor: pointer;
-}
-
-.facebook-login {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #385185;
-  margin-bottom: 2.5rem;
 }
 
 .facebook-login i {
   font-size: 2rem;
   margin-right: 0.7rem;
-  margin: 0;
   margin-left: 3px;
-  padding: 0;
 }
 
 span img {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
   vertical-align: middle;
 }
 
 /*password reset styling*/
 .password-reset {
-  font-size: 1.2rem;
+  font-size: 12px;
   color: #003569;
 }
 
 /*signup text styling*/
 .sign-up {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 14px;
   color: #262626;
   padding: 2rem 0;
   background-color: #fff;
-  border: 2px solid #eee;
-  margin: 1rem 0;
-}
-
-.sign-up {
-  text-align: center;
-  font-size: 1.4rem;
-  color: #262626;
-  padding: 2rem 0;
-  background-color: #fff;
-  border: 2px solid #eee;
+  border: 1px solid #dbdbdb;
   margin: 1rem 0;
 }
 
@@ -247,13 +228,13 @@ span img {
 
 /*Play stor and App store image styling*/
 .get-the-app {
-  font-size: 1.4rem;
+  font-size: 14px;
   text-align: center;
 }
 
 .get-the-app span {
   display: block;
-  margin: 2rem 0;
+  margin: 1.2rem 0;
   color: #262626;
 }
 
@@ -274,6 +255,8 @@ span img {
 }
 
 .badge img {
+  width: 110.8px;
+  height: 40px;
   max-width: 14rem;
   cursor: pointer;
 }

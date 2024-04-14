@@ -8,7 +8,7 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-import Footer from "../../Footer";
+import Footer from "../../Common/Footer/footer";
 import ImageSlider from "../ImageSlider/ImageSlider";
 
 import "./login.css";
@@ -22,12 +22,12 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [passwordType, setPasswordType] = useState("password");
   const [userData, setUserData] = useState(null); // 사용자 데이터 상태 관리를 위한 useState
+  const [isPasswordEntered, setIsPasswordEntered] = useState(false); // 비밀번호 입력 여부를 추적하는 상태
   const [errorMsg, setErrorMsg] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("로그인 시도:", user, password);
 
     // Firebase Authentication으로 로그인 시도
     const auth = getAuth();
@@ -58,6 +58,19 @@ const LoginForm = () => {
       });
   }
 
+  const isValidEmail = (email) => {
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
+
+  // 비밀번호 입력 변경 핸들러 수정
+  const handlePasswordChange = (e) => {
+    const newPassword = e.target.value;
+    setPassword(newPassword);
+    setIsPasswordEntered(newPassword.length > 0); // 비밀번호가 입력되었는지 여부를 업데이트
+  };
+
   // 비밀번호 표시/숨김 전환 함수
   const togglePasswordVisibility = () => {
     setPasswordType(passwordType === "password" ? "text" : "password");
@@ -80,19 +93,25 @@ const LoginForm = () => {
             <div class="password-container">
               <input
                 type={passwordType}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={handlePasswordChange}
                 placeholder="비밀번호"
                 class="password-input"
               />
-              <button
-                onClick={togglePasswordVisibility}
-                class="toggle-password"
-              >
-                {passwordType === "password" ? "비밀번호 표시" : "숨기기"}
-              </button>
+              {isPasswordEntered && ( // 비밀번호가 입력되었을 때만 버튼 표시
+                <button
+                  onClick={togglePasswordVisibility}
+                  class="toggle-password"
+                >
+                  {passwordType === "password" ? "비밀번호 표시" : "숨기기"}
+                </button>
+              )}
             </div>
             {errorMsg && <p className="error-msg">{errorMsg}</p>}
-            <button className="form-btn" onClick={handleSubmit}>
+            <button
+              className="formBtn"
+              onClick={handleSubmit}
+              disabled={!isValidEmail(user)}
+            >
               로그인
             </button>
             <span className="has-separator">또는</span>
