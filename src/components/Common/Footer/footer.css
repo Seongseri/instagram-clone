@@ -1,0 +1,106 @@
+/*Footer link styling*/
+footer {
+  padding: 5rem 0;
+  width: 90vw;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* 내비게이션 항목을 중앙에 배치 */
+  gap: 5px; /* 항목 사이의 간격 */
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.footer-nav ul li {
+  margin-right: 1.2rem;
+}
+
+.footer-nav ul li a {
+  color: #737373;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.copyright-notice {
+  color: #737373;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+select {
+  border: none;
+  background-color: transparent;
+  color: #737373;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 12px;
+  text-align-last: right;
+}
+
+select:hover,
+select:focus {
+  border: none;
+  outline: none;
+}
+
+option {
+  color: black;
+}
+
+/*responsive styling*/
+@media (max-width: 900px) {
+  .phone-app-demo {
+    display: none;
+  }
+
+  .form-data {
+    margin: 0 auto;
+  }
+
+  #wrapper > .container {
+    padding: 0;
+  }
+
+  footer .container {
+    padding: 0 2rem;
+    justify-content: center;
+  }
+
+  .footer-nav ul {
+    justify-content: center;
+  }
+
+  .footer-nav ul li {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  #wrapper {
+    padding-top: 0;
+  }
+  .form-data form {
+    background-color: transparent;
+    border: none;
+    padding: 0 2rem;
+  }
+  .sign-up {
+    background-color: transparent;
+    border: none;
+    margin: 4rem 0;
+  }
+  footer {
+    padding-bottom: 2rem;
+  }
+}

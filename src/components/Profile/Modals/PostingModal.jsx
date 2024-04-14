@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import * as S from "./PostingModal.Styles";
+import WrapComments from "../../Comment/WrapComments";
 
 const PostingModal = ({ modalOpen, setModalOpen, clickedImageUrl }) => {
   const modalBackground = useRef();
@@ -27,7 +28,7 @@ const PostingModal = ({ modalOpen, setModalOpen, clickedImageUrl }) => {
               alt="Selected Posting"
               style={{ maxWidth: "100%" }}
             />
-            <p>댓글, 좋아요</p>
+            <WrapComments />
           </S.ModalContentDiv>
         </S.PostingModalDiv>
       )}

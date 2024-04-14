@@ -1,0 +1,203 @@
+/* SignUp.css */
+#signupWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sign-up-form input {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 0.4rem;
+  width: 80%;
+  height: 37.6px;
+}
+
+.pw-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  left: 2.5rem;
+}
+
+.togglePassword {
+  position: absolute;
+  right: 4.8rem;
+  top: 6%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  color: black;
+  font-weight: bold;
+}
+
+.signContainer {
+  width: 100%;
+  max-width: 93.5rem;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up-box {
+  padding: 3rem 0rem;
+  background: #ffffff;
+  width: 25rem;
+  height: fit-content;
+  border: 1px solid #eee;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 17rem;
+  text-align: center;
+}
+
+.notice {
+  margin-top: 1.5rem;
+  width: 27rem;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.facebookLogin {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: #0095f6;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  margin-top: 1.5rem;
+  width: 80%;
+  height: 33.6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.contour {
+  width: 20rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  border-top: 1px solid #eee;
+  flex-grow: 1;
+}
+
+.or {
+  width: 5rem;
+  margin: 2rem 0rem;
+  color: #666666;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.error-box {
+  width: 27rem;
+  height: auto;
+  margin-top: 1.5rem;
+  color: red;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+
+.form-btn {
+  width: 80% !important;
+  height: 33.6px;
+  border-radius: 3px;
+  margin-top: 1.5rem;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #0095f6;
+}
+
+.notice2 {
+  margin-top: 1.5rem;
+  width: 80%;
+  font-size: 12px;
+  text-align: center;
+  color: #666666;
+  line-height: normal;
+}
+
+.infoForgot {
+  color: #00376b;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.login {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-box {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 35rem;
+  height: 6.5rem;
+  border: 1px solid #eee;
+  background: #ffffff;
+  font-size: 1.4rem;
+  width: 26.1vw;
+}
+
+.text {
+  display: inline-block;
+  height: 0.9rem;
+  font-size: 14px;
+}
+
+.sign-up-link {
+  margin-left: 0.5rem;
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.form-btn:hover {
+  background-color: #1877f2;
+}

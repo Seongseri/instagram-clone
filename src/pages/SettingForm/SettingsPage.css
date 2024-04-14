@@ -1,0 +1,59 @@
+/* SettingsPage.css */
+.settingsContainer {
+  height: 100%;
+  border-left: 1px solid #e1e1e1;
+  display: block;
+  position: fixed;
+  margin-left: 12px;
+}
+
+.settingsHeader {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+}
+.middleBar {
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+  max-height: 100%;
+  overflow-y: auto;
+  max-width: 315px;
+}
+
+.option {
+  margin-bottom: 20px;
+}
+
+.optionTitle {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  color: #737373;
+}
+
+.optionContents {
+  list-style: none;
+  padding-left: 0;
+}
+
+.optionContents li {
+  font-size: 14px;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: normal;
+}
+
+.optionContents li:hover {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+.settingsContainer img {
+  width: 24px;
+  height: 24px;
+}

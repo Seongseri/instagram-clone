@@ -1,23 +1,45 @@
 .leftBarBox {
   padding: 30px;
-
   display: block;
   position: fixed;
   height: 100%;
+  z-index: 1;
+}
+
+.leftBar-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.leftBar-header-icon {
+  width: 25px;
+  height: 25px;
 }
 
 .leftBar-logo {
   margin-left: 10px;
+  margin-top: 5px;
+  width: 88px;
+  height: 25px;
+  cursor: pointer;
 }
 .leftBar-main {
   display: table;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .leftBar-main-tab {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 1rem 1rem 1rem 0;
+}
+
+.leftBar-main-tab:hover {
+  border-radius: 10px;
+  background-color: #f0f0f0;
 }
 
 .leftBar-txt {
@@ -29,66 +51,169 @@
 .leftBar-txt-home {
   font-size: 15px;
   font-weight: bold;
-  margin: 25px;
+  margin: 35px;
   cursor: pointer;
+  margin: 0 0 0 15px;
 }
 
 .leftBar-txt-search {
   font-size: 15px;
   font-weight: bold;
-  margin: 15px;
+  margin: 25px;
   cursor: pointer;
+  margin: 0 0 0 15px;
+}
+
+.leftBar-txt-compass {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  margin: 0 0 0 15px;
 }
 
 .leftBar-txt-direct {
   font-size: 15px;
   font-weight: bold;
-  margin: 5px;
+  margin: 15px;
   cursor: pointer;
+  margin: 0 0 0 15px;
 }
 
 .leftBar-txt-like {
   font-size: 15px;
   font-weight: bold;
-  margin: 15px;
+  margin: 25px;
   cursor: pointer;
+  margin: 0 0 0 15px;
 }
 
 .leftBar-txt-plus {
   font-size: 15px;
   font-weight: bold;
-  margin: 5px;
+  margin: 15px;
+  cursor: pointer;
+  margin: 0 0 0 15px;
+}
+
+.leftBar-txt-profile {
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 0 0 10px;
+  padding-top: 3px;
+}
+
+.leftBar-txt-more {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0 0 0 10px;
   cursor: pointer;
 }
 
 .leftBar-icon {
   width: 25px;
   height: 25px;
-  display: table-cell;
-  vertical-align: middle;
-  margin: 20px 0 20px 0;
+  margin-right: 15px;
   cursor: pointer;
 }
 
+.leftBar-profileIcon {
+  width: 25px;
+  height: 25px;
+  display: table-cell;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
 .leftBar-footer {
-  margin-top: 50px;
+  margin-top: 4.5rem;
 }
 
 .settings {
   display: flex;
-
   align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
 }
 
 .settings-icon {
-  width: 15px;
-  margin-right: 5px;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 2.1rem;
   margin-top: 8px;
 }
 
 .settings-txt {
   margin-top: 10px;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
+}
+
+.tab-txt {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 18px 5px;
+}
+
+.leftBar-show-tab {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0.125rem;
+}
+
+.tab-txt:hover,
+.settings:hover,
+.leftBar-show-tab:hover {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.hiddenBar-txt {
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.settings-menu {
+  position: absolute;
+  bottom: 4.5rem;
+  padding: 1.5rem;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  animation: slideDown 0.3s forwards; /* 나타날 때 애니메이션 적용 */
+  border-radius: 20px;
+  width: 100%;
+  padding-left: 1.5rem;
+}
+
+.settings-menu-hidden {
+  animation: slideUp 0.3s forwards; /* 사라질 때 애니메이션 적용 */
 }
