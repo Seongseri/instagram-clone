@@ -26,3 +26,6 @@ yarn-error.log*
 contents/*.md
 
 *storybook.log
+
+# .gitignore
+.env
