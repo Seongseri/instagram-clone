@@ -7,6 +7,7 @@ import Activity from "../../../assets/Images/sidebarTab/activity.svg";
 import SwitchMode from "../../../assets/Images/sidebarTab/SwitchMode.svg";
 import ReportProblem from "../../../assets/Images/sidebarTab/reportProblem.svg";
 import Setting from "../../../assets/Images/sidebarTab/Setting.svg";
+import InstagramLogo from "../../../assets/Images/sidebar/instagram_logo.png";
 
 function LeftBar() {
   const [menu, setMenu] = useState(false);
@@ -22,7 +23,7 @@ function LeftBar() {
           />
           <img
             className="leftBar-logo"
-            src={process.env.PUBLIC_URL + "/assets/instagram.png"}
+            src={InstagramLogo}
             onClick={() => {
               navigate("/main");
             }}
