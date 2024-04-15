@@ -31,9 +31,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
@@ -69,6 +67,5 @@
     "prop-types": "^15.8.1",
     "storybook": "^8.0.5",
     "webpack": "^5.91.0"
-  },
-  "homepage": "https://seongseri.github.io/instagram-clone/"
+  }
 }
