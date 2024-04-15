@@ -1,5 +1,5 @@
 import React from "react";
-import "./SettingsPage.css";
+import "./SettingForm.css";
 import EditProfile from "../../assets/Images/SettingAccount/EditProfile.svg";
 import Notification from "../../assets/Images/SettingAccount/Notification.svg";
 import AccountsDisabledUpdates from "../../assets/Images/SettingAccount/AccountsDisabledUpdates.svg";

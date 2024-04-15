@@ -288,26 +288,3 @@ function Comment(props) {
 }
 
 export default Feed;
-
-{
-  /* <p className="eachComment">
-        <div>
-          <span className="comment-id">{props.data.id2}</span>
-          {props.data.cmt2}
-        </div>
-        <img
-          className="comment-icon"
-          src={process.env.PUBLIC_URL + "/assets/heart.png"}
-        />
-      </p>
-      <p className="eachComment">
-        <div>
-          <span className="comment-id">{props.data.id3}</span>
-          {props.data.cmt3}
-        </div>
-        <img
-          className="comment-icon"
-          src={process.env.PUBLIC_URL + "/assets/heart.png"}
-        />
-      </p> */
-}
