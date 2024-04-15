@@ -4,6 +4,7 @@
   position: fixed;
   height: 100%;
   z-index: 1;
+  border-right: 1px solid #e1e1e1;
 }
 
 .leftBar-header {
