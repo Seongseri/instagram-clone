@@ -6,10 +6,10 @@
       "postingImages": [
         {
           "imgId": 101,
-          "imgUrl": "/assets/images/postingImg/dolphin.jpg"
+          "imgUrl": "/assets/images/postingImg/loopy1.jpg"
         }
       ],
-      "content": "돌고래 수영"
+      "content": "루피와 휴대폰"
     },
     {
       "postingId": 2,
@@ -17,10 +17,10 @@
       "postingImages": [
         {
           "imgId": 102,
-          "imgUrl": "/assets/images/postingImg/earth.jpg"
+          "imgUrl": "/assets/images/postingImg/loopy2.jpg"
         }
       ],
-      "content": "지구를 아끼자"
+      "content": "눈치 주는 루피 "
     },
     {
       "postingId": 3,
@@ -28,10 +28,10 @@
       "postingImages": [
         {
           "imgId": 103,
-          "imgUrl": "/assets/images/postingImg/fire.jpg"
+          "imgUrl": "/assets/images/postingImg/loopy3.jpg"
         }
       ],
-      "content": "스모어 만들기기"
+      "content": "모자 쓴 루피"
     },
     {
       "postingId": 4,
@@ -39,10 +39,10 @@
       "postingImages": [
         {
           "imgId": 104,
-          "imgUrl": "/assets/images/postingImg/hat.jpg"
+          "imgUrl": "/assets/images/postingImg/loopy4.jpg"
         }
       ],
-      "content": "모자 쓰고 피크닉"
+      "content": "안경 쓴 루피"
     },
     {
       "postingId": 5,
@@ -50,10 +50,10 @@
       "postingImages": [
         {
           "imgId": 105,
-          "imgUrl": "/assets/images/postingImg/meeting.jpg"
+          "imgUrl": "/assets/images/postingImg/loopy5.jpg"
         }
       ],
-      "content": "오늘 회의 시작!"
+      "content": "안경이 삐둟어진 루피"
     },
     {
       "postingId": 6,
@@ -61,10 +61,10 @@
       "postingImages": [
         {
           "imgId": 106,
-          "imgUrl": "/assets/images/postingImg/star.jpg"
+          "imgUrl": "/assets/images/postingImg/loopy6.jpg"
         }
       ],
-      "content": "반짝이는 아이디어"
+      "content": "쿠키 먹는 루피"
     },
     {
       "postingId": 7,
@@ -72,10 +72,10 @@
       "postingImages": [
         {
           "imgId": 107,
-          "imgUrl": "/assets/images/postingImg/peach_blossom.jpg"
+          "imgUrl": "/assets/images/postingImg/loopy7.jpg"
         }
       ],
-      "content": "벚꽃의 계절"
+      "content": "밤에 셀카 찍는 안경 쓴 루피"
     },
     {
       "postingId": 8,
@@ -83,10 +83,10 @@
       "postingImages": [
         {
           "imgId": 108,
-          "imgUrl": "/assets/images/postingImg/test.jpg"
+          "imgUrl": "/assets/images/postingImg/loopy8.jpg"
         }
       ],
-      "content": "코딩 테스트"
+      "content": "밤에 셀카 찍는 루피"
     }
   ]
 }
